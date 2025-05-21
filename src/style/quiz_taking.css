@@ -1,0 +1,134 @@
+/* General container */
+.quiz-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Loading or error text */
+.loading, .error {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  padding: 20px;
+}
+
+/* Question text */
+.question {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Option list */
+.options {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.options li {
+  margin-bottom: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  padding: 12px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+}
+
+.options label:hover {
+  background-color: #e2e8f0;
+}
+
+.options input[type="radio"]:checked + span {
+  font-weight: bold;
+  color: #1a202c;
+}
+
+/* Button styles */
+.next-btn {
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px 24px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #3a78c2;
+}
+
+/* Result section */
+.review {
+  margin-top: 40px;
+}
+
+.review-question {
+  margin-bottom: 30px;
+}
+
+.review-question strong {
+  font-size: 17px;
+  color: #222;
+}
+
+.review-question ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.review-question li {
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.correct {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: 600;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 20px;
+  }
+
+  .next-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .options label {
+    flex-direction: row;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
